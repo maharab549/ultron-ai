@@ -1,8 +1,8 @@
-# AI Manus 后端服务
+﻿# ULTRON AI 后端服务
 
 [English](README.md) | 中文
 
-AI Manus 是一个基于 FastAPI 和 OpenAI API 的智能对话代理系统。该后端采用领域驱动设计(DDD)架构，支持智能对话、文件操作、Shell命令执行以及浏览器自动化等功能。
+ULTRON AI 是一个基于 FastAPI 和 OpenAI API 的智能对话代理系统。该后端采用领域驱动设计(DDD)架构，支持智能对话、文件操作、Shell命令执行以及浏览器自动化等功能。
 
 ## 项目架构
 

@@ -1,16 +1,16 @@
-# 🤖 AI Manus 开源通用智能体
+﻿# 🤖 ULTRON AI 开源通用智能体
 
-项目地址：<https://github.com/Simpleyyt/ai-manus>
+项目地址：<https://github.com/maharab549/ai-manus>
 
 加入我们的社群：[QQ群(1005477581)](https://qun.qq.com/universal-share/share?ac=1&authKey=p4X3Da5iMpR4liAenxwvhs7IValPKiCFtUevRlJouz9qSTSZsMnPJc3hzsJjgQYv&busi_data=eyJncm91cENvZGUiOiIxMDA1NDc3NTgxIiwidG9rZW4iOiJNZmUrTmQ0UzNDZDNqNDFVdjVPS1VCRkJGRWVlV0R3RFJSRVFoZDAwRjFDeUdUM0t6aUIyczlVdzRjV1BYN09IIiwidWluIjoiMzQyMjExODE1In0%3D&data=C3B-E6BlEbailV32co77iXL5vxPIhtD9y_itWLSq50hKqosO_55_isOZym2Faaq4hs9-517tUY8GSWaDwPom-A&svctype=4&tempid=h5_group_info)
 
 ---
 
-AI Manus 是一个通用的 AI Agent 系统，可以完全私有部署，支持在沙盒环境中运行各种工具和操作。
+ULTRON AI 是一个通用的 AI Agent 系统，可以完全私有部署，支持在沙盒环境中运行各种工具和操作。
 
-AI Manus 项目目标是希望成为可完全私有部署的企业级 Manus 应用。垂类 Manus 的应用有多种重复性的工程化工作，这个项目希望把这部分统一，让大家可以像搭积木一下建立起一个垂类 Manus 应用。
+ULTRON AI 项目目标是希望成为可完全私有部署的企业级 Manus 应用。垂类 Manus 的应用有多种重复性的工程化工作，这个项目希望把这部分统一，让大家可以像搭积木一下建立起一个垂类 Manus 应用。
 
-AI Manus 中每个服务与工具都包含一个 Built-in 版本，可以做到完全私有部署。后续可以通过 A2A 与 MCP 协议，把 Built-in 的 Agent 与 Tools 都置换掉。底层基建也可以通过提供多样的提供商配置或者简单的开发适配置换掉。AI Manus 从架构设计上便支持分布式多实例部署，方便横向扩展，达到企业级的部署要求。
+ULTRON AI 中每个服务与工具都包含一个 Built-in 版本，可以做到完全私有部署。后续可以通过 A2A 与 MCP 协议，把 Built-in 的 Agent 与 Tools 都置换掉。底层基建也可以通过提供多样的提供商配置或者简单的开发适配置换掉。ULTRON AI 从架构设计上便支持分布式多实例部署，方便横向扩展，达到企业级的部署要求。
 
 ---
 

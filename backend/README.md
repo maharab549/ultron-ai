@@ -1,8 +1,8 @@
-# AI Manus Backend Service
+﻿# ULTRON AI Backend Service
 
 English | [中文](README_zh.md)
 
-AI Manus is an intelligent conversation agent system based on FastAPI and OpenAI API. The backend adopts Domain-Driven Design (DDD) architecture, supporting intelligent dialogue, file operations, Shell command execution, and browser automation.
+ULTRON AI is an intelligent conversation agent system based on FastAPI and OpenAI API. The backend adopts Domain-Driven Design (DDD) architecture, supporting intelligent dialogue, file operations, Shell command execution, and browser automation.
 
 ## Project Architecture
 

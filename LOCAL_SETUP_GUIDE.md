@@ -1,4 +1,4 @@
-# Manus 1.6 Max Local Setup Guide
+﻿# Manus 1.6 Max Local Setup Guide
 
 This guide will help you set up and run the Manus 1.6 Max project on your local machine.
 
@@ -15,7 +15,7 @@ This guide will help you set up and run the Manus 1.6 Max project on your local 
 1. Unzip the project files to your desired directory.
 2. Navigate to the project root:
    ```bash
-   cd ai-manus-main
+   cd ai-manus
    ```
 3. Copy the environment template:
    ```bash
@@ -98,4 +98,4 @@ This will start:
 - **Docker Errors**: Make sure Docker Desktop is running and you have enough disk space.
 - **Frontend Build Errors**: Ensure you are using Node.js v18 or higher.
 
-For more detailed documentation, visit [docs.ai-manus.com](https://docs.ai-manus.com).
+For more detailed documentation, visit [github.com/maharab549/ai-manus](https://github.com/maharab549/ai-manus).
