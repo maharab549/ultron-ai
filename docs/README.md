@@ -17,7 +17,7 @@ ULTRON AI 是一个通用 AI 智能体系统，能够在安全沙箱环境中自
 ## 快速开始
 
 ```bash
-git clone https://github.com/maharab549/ai-manus.git
+git clone https://github.com/maharab549/ultron-ai.git
 cd ai-manus
 cp docker-compose-example.yml docker-compose.yml
 # 编辑 docker-compose.yml 设置 LLM 配置
@@ -35,4 +35,4 @@ docker compose up -d
 
 ## 链接
 
-- [GitHub 仓库](https://github.com/maharab549/ai-manus)
+- [GitHub 仓库](https://github.com/maharab549/ultron-ai)

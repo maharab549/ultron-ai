@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <a href="https://github.com/maharab549/ai-manus" 
+            <a href="https://github.com/maharab549/ultron-ai" 
                target="_blank"
                class="items-center justify-center whitespace-nowrap font-medium transition-colors hover:opacity-90 active:opacity-80 px-[12px] gap-[6px] text-sm min-w-16 outline outline-1 -outline-offset-1 hover:bg-[var(--fill-tsp-white-light)] text-[var(--text-primary)] outline-[var(--border-btn-main)] bg-transparent clickable hidden sm:flex rounded-[100px] relative h-[32px] group"
                title="Visit GitHub Repository">

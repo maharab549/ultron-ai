@@ -15,7 +15,7 @@ This guide walks you through setting up ULTRON AI for local development with hot
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/maharab549/ai-manus.git
+git clone https://github.com/maharab549/ultron-ai.git
 cd ai-manus
 ```
 

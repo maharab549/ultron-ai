@@ -17,7 +17,7 @@ ULTRON AI is a general-purpose AI agent system that can autonomously plan, reaso
 ## Quick Start
 
 ```bash
-git clone https://github.com/maharab549/ai-manus.git
+git clone https://github.com/maharab549/ultron-ai.git
 cd ai-manus
 cp docker-compose-example.yml docker-compose.yml
 # Edit docker-compose.yml with your LLM settings
@@ -35,5 +35,5 @@ Visit **http://localhost:5173**
 
 ## Links
 
-- [GitHub Repository](https://github.com/maharab549/ai-manus)
-- [Full README](https://github.com/maharab549/ai-manus#readme)
+- [GitHub Repository](https://github.com/maharab549/ultron-ai)
+- [Full README](https://github.com/maharab549/ultron-ai#readme)

@@ -1,75 +1,75 @@
-﻿<p align="center">
-  <h1 align="center">⚡ ULTRON AI</h1>
+<p align="center">
+  <h1 align="center">? ULTRON AI</h1>
   <p align="center"><strong>Open-Source Autonomous AI Agent Platform</strong></p>
   <p align="center">Built by <a href="https://github.com/maharab549">Maharab Hossen</a></p>
 </p>
 
 <p align="center">
-  <a href="https://github.com/maharab549/ai-manus/stargazers"><img src="https://img.shields.io/github/stars/maharab549/ai-manus?style=for-the-badge&color=gold" alt="Stars"></a>
-  <a href="https://github.com/maharab549/ai-manus/network/members"><img src="https://img.shields.io/github/forks/maharab549/ai-manus?style=for-the-badge&color=blue" alt="Forks"></a>
-  <a href="https://github.com/maharab549/ai-manus/issues"><img src="https://img.shields.io/github/issues/maharab549/ai-manus?style=for-the-badge&color=red" alt="Issues"></a>
-  <a href="https://github.com/maharab549/ai-manus/blob/main/LICENSE"><img src="https://img.shields.io/github/license/maharab549/ai-manus?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/maharab549/ultron-ai/stargazers"><img src="https://img.shields.io/github/stars/maharab549/ultron-ai?style=for-the-badge&color=gold" alt="Stars"></a>
+  <a href="https://github.com/maharab549/ultron-ai/network/members"><img src="https://img.shields.io/github/forks/maharab549/ultron-ai?style=for-the-badge&color=blue" alt="Forks"></a>
+  <a href="https://github.com/maharab549/ultron-ai/issues"><img src="https://img.shields.io/github/issues/maharab549/ultron-ai?style=for-the-badge&color=red" alt="Issues"></a>
+  <a href="https://github.com/maharab549/ultron-ai/blob/main/LICENSE"><img src="https://img.shields.io/github/license/maharab549/ultron-ai?style=for-the-badge" alt="License"></a>
 </p>
 
 <p align="center">
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-configuration">Configuration</a> •
-  <a href="./README_zh.md">中文文档</a>
+  <a href="#-quick-start">Quick Start</a> �
+  <a href="#-features">Features</a> �
+  <a href="#-architecture">Architecture</a> �
+  <a href="#-configuration">Configuration</a> �
+  <a href="./README_zh.md">????</a>
 </p>
 
 ---
 
-## 🤔 What is ULTRON AI?
+## ?? What is ULTRON AI?
 
-**ULTRON AI** is an open-source, general-purpose AI agent system that can autonomously plan, reason and execute complex tasks. Give it a goal and it will break it down, use tools, browse the web, write code, manipulate files, and deliver results — all inside a secure sandboxed environment.
+**ULTRON AI** is an open-source, general-purpose AI agent system that can autonomously plan, reason and execute complex tasks. Give it a goal and it will break it down, use tools, browse the web, write code, manipulate files, and deliver results � all inside a secure sandboxed environment.
 
-Think of it as your own self-hosted alternative to Manus AI, ChatGPT with Code Interpreter, or Devin — but fully open source and under your control.
+Think of it as your own self-hosted alternative to Manus AI, ChatGPT with Code Interpreter, or Devin � but fully open source and under your control.
 
 ### How ULTRON AI Compares
 
 | Capability | ULTRON AI | Manus AI | ChatGPT |
 |:---|:---:|:---:|:---:|
-| Open Source | ✅ | ❌ | ❌ |
-| Self-Hosted | ✅ | ❌ | ❌ |
-| Web Browsing | ✅ | ✅ | ✅ |
-| Code Execution | ✅ | ✅ | ✅ |
-| File Operations | ✅ | ✅ | ✅ |
-| Sandboxed Environment | ✅ | ✅ | ❌ |
-| MCP Tool Integration | ✅ | ❌ | ❌ |
-| Custom LLM Backend | ✅ | ❌ | ❌ |
-| Local / Offline Mode | ✅ | ❌ | ❌ |
-| Free to Use | ✅ | ❌ | ❌ |
+| Open Source | ? | ? | ? |
+| Self-Hosted | ? | ? | ? |
+| Web Browsing | ? | ? | ? |
+| Code Execution | ? | ? | ? |
+| File Operations | ? | ? | ? |
+| Sandboxed Environment | ? | ? | ? |
+| MCP Tool Integration | ? | ? | ? |
+| Custom LLM Backend | ? | ? | ? |
+| Local / Offline Mode | ? | ? | ? |
+| Free to Use | ? | ? | ? |
 
 ---
 
-## ✨ Features
+## ? Features
 
-- 🧠 **Autonomous Planning** — Breaks complex tasks into actionable steps using Plan-Act architecture
-- 🌐 **Live Web Browser** — Full Chrome browser running inside the sandbox, viewable via NoVNC in real-time
-- 💻 **Shell & Code Execution** — Runs bash commands, Python scripts, and more inside an isolated Ubuntu container
-- 📁 **File Management** — Creates, reads, edits, and organizes files within the sandbox filesystem
-- 🔌 **MCP Tool Ecosystem** — Extend capabilities with Model Context Protocol servers (GitHub, databases, APIs, etc.)
-- 🔍 **Web Search** — Integrated search via Bing, Google, or Baidu
-- 🔐 **Secure Sandbox** — Every task runs in a disposable Docker container with automatic cleanup
-- 👥 **Multi-User Auth** — Built-in authentication with email/password, local admin, or no-auth modes
-- 🎨 **Modern Web UI** — Clean Vue 3 interface with real-time streaming, session sharing, and tool visualization
-- 🤖 **Any LLM** — Works with OpenAI, DeepSeek, LM Studio, Ollama, or any OpenAI-compatible API
+- ?? **Autonomous Planning** � Breaks complex tasks into actionable steps using Plan-Act architecture
+- ?? **Live Web Browser** � Full Chrome browser running inside the sandbox, viewable via NoVNC in real-time
+- ?? **Shell & Code Execution** � Runs bash commands, Python scripts, and more inside an isolated Ubuntu container
+- ?? **File Management** � Creates, reads, edits, and organizes files within the sandbox filesystem
+- ?? **MCP Tool Ecosystem** � Extend capabilities with Model Context Protocol servers (GitHub, databases, APIs, etc.)
+- ?? **Web Search** � Integrated search via Bing, Google, or Baidu
+- ?? **Secure Sandbox** � Every task runs in a disposable Docker container with automatic cleanup
+- ?? **Multi-User Auth** � Built-in authentication with email/password, local admin, or no-auth modes
+- ?? **Modern Web UI** � Clean Vue 3 interface with real-time streaming, session sharing, and tool visualization
+- ?? **Any LLM** � Works with OpenAI, DeepSeek, LM Studio, Ollama, or any OpenAI-compatible API
 
 ---
 
-## 🚀 Quick Start
+## ?? Quick Start
 
 ### Prerequisites
 
-- **Docker Desktop** (Windows/Mac) or **Docker Engine** (Linux)  — v20.10+
+- **Docker Desktop** (Windows/Mac) or **Docker Engine** (Linux)  � v20.10+
 - An LLM with **function calling** support (OpenAI, DeepSeek, LM Studio, etc.)
 
 ### 1. Clone & Configure
 
 ```bash
-git clone https://github.com/maharab549/ai-manus.git
+git clone https://github.com/maharab549/ultron-ai.git
 cd ai-manus
 cp docker-compose-example.yml docker-compose.yml
 ```
@@ -114,25 +114,25 @@ docker compose up -d
 
 Visit **http://localhost:5173** in your browser. That's it!
 
-> **Note:** You'll see `sandbox-1 exited with code 0` — this is expected. It pre-pulls the sandbox image.
+> **Note:** You'll see `sandbox-1 exited with code 0` � this is expected. It pre-pulls the sandbox image.
 
 ---
 
-## ⚙️ Architecture
+## ?? Architecture
 
 ULTRON AI follows a clean, modular architecture:
 
 ```
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  Frontend    │────▶│   Backend    │────▶│    Sandbox      │
-│  (Vue 3)    │◀────│  (FastAPI)   │◀────│  (Ubuntu+Chrome)│
-└─────────────┘ SSE └──────────────┘     └─────────────────┘
-                          │                       │
-                     ┌────┴────┐            ┌─────┴─────┐
-                     │ MongoDB │            │  Browser   │
-                     │  Redis  │            │  Shell     │
-                     └─────────┘            │  Files     │
-                                            └───────────┘
++-------------+     +--------------+     +-----------------+
+�  Frontend    �----?�   Backend    �----?�    Sandbox      �
+�  (Vue 3)    �?----�  (FastAPI)   �?----�  (Ubuntu+Chrome)�
++-------------+ SSE +--------------+     +-----------------+
+                          �                       �
+                     +---------+            +-----------+
+                     � MongoDB �            �  Browser   �
+                     �  Redis  �            �  Shell     �
+                     +---------+            �  Files     �
+                                            +-----------+
 ```
 
 **How it works:**
@@ -145,12 +145,12 @@ ULTRON AI follows a clean, modular architecture:
 
 ---
 
-## 📋 Configuration
+## ?? Configuration
 
 | Variable | Description | Default |
 |:---|:---|:---|
 | `API_BASE` | LLM API endpoint | `http://mockserver:8090/v1` |
-| `API_KEY` | LLM API key | — |
+| `API_KEY` | LLM API key | � |
 | `MODEL_NAME` | Model identifier | `deepseek-chat` |
 | `TEMPERATURE` | Response randomness (0-1) | `0.7` |
 | `MAX_TOKENS` | Max response tokens | `2000` |
@@ -163,13 +163,13 @@ See [full configuration docs](docs/en/configuration.md) for all options includin
 
 ---
 
-## 🛠️ Development
+## ??? Development
 
 For local development with hot-reload:
 
 ```bash
 # Clone
-git clone https://github.com/maharab549/ai-manus.git
+git clone https://github.com/maharab549/ultron-ai.git
 cd ai-manus
 
 # Copy env template
@@ -187,26 +187,26 @@ See [LOCAL_SETUP_GUIDE.md](LOCAL_SETUP_GUIDE.md) for detailed development setup 
 
 ---
 
-## 📁 Project Structure
+## ?? Project Structure
 
 ```
 ultron-ai/
-├── frontend/          # Vue 3 + TypeScript web interface
-├── backend/           # FastAPI Python backend (DDD architecture)
-│   └── app/
-│       ├── domain/        # Business logic, agents, flows
-│       ├── infrastructure/# LLM clients, DB, external services
-│       ├── interfaces/    # API routes, WebSocket handlers
-│       └── application/   # Application services
-├── sandbox/           # Ubuntu Docker sandbox with Chrome + tools
-├── mockserver/        # Development mock LLM server
-├── docs/              # Documentation site (Docsify)
-└── docker-compose.yml # Production deployment
++-- frontend/          # Vue 3 + TypeScript web interface
++-- backend/           # FastAPI Python backend (DDD architecture)
+�   +-- app/
+�       +-- domain/        # Business logic, agents, flows
+�       +-- infrastructure/# LLM clients, DB, external services
+�       +-- interfaces/    # API routes, WebSocket handlers
+�       +-- application/   # Application services
++-- sandbox/           # Ubuntu Docker sandbox with Chrome + tools
++-- mockserver/        # Development mock LLM server
++-- docs/              # Documentation site (Docsify)
++-- docker-compose.yml # Production deployment
 ```
 
 ---
 
-## 🗺️ Roadmap
+## ??? Roadmap
 
 - [x] Browser takeover with live viewing
 - [x] MCP tool integration
@@ -221,7 +221,7 @@ ultron-ai/
 
 ---
 
-## 🤝 Contributing
+## ?? Contributing
 
 Contributions are welcome! Feel free to:
 
@@ -233,13 +233,13 @@ Contributions are welcome! Feel free to:
 
 ---
 
-## 📜 License
+## ?? License
 
 This project is open-source. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
-  <strong>⭐ Star this repo if you find ULTRON AI useful!</strong><br>
-  <a href="https://github.com/maharab549/ai-manus">https://github.com/maharab549/ai-manus</a>
+  <strong>? Star this repo if you find ULTRON AI useful!</strong><br>
+  <a href="https://github.com/maharab549/ultron-ai">https://github.com/maharab549/ultron-ai</a>
 </p>
