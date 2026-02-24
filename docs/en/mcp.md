@@ -4,11 +4,6 @@
 
 MCP (Model Context Protocol) is an open standard protocol for providing secure connections between language model applications and external data sources and tools. In ULTRON AI, MCP allows AI assistants to access and use various external services and tools, such as GitHub API, file systems, databases, and more.
 
-## Demo
-
-> Task: Analyze the GitHub repositories of user simpleyyt
-
-![](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/mcp.mp4 ':include controls width="100%"')
 
 ## Configuration Guide
 
@@ -65,7 +60,7 @@ Configure MCP service in `docker-compose.yml`:
 ...
 services:
   backend:
-    image: simpleyyt/manus-backend
+    image: ultron-ai-backend
     volumes:
       - ./mcp.json:/etc/mcp.json  # Mount MCP configuration file
       - ...

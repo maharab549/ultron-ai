@@ -1,20 +1,19 @@
 # ✨ 场景演示
 
-## 电脑接管
+ULTRON AI 支持多种使用场景：
 
-> 任务: 看一下知乎热搜
+## 🖥️ 电脑接管
 
-[](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/takeover.mp4 ':include controls width="100%"')
+ULTRON AI 可以控制浏览器完成各种网页操作任务，如搜索信息、浏览网站等。
 
-## 文件处理
+## 📄 文件处理
 
-> 任务：转成 jpg
+支持文件格式转换、文件编辑、数据处理等各种文件操作。
 
-![](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/file.mp4 ':include controls width="100%"')
+## 🔌 MCP 工具调用
 
+通过 MCP 协议集成外部工具，如 GitHub API、数据库查询等。
 
-## MCP 工具调用
+## 💻 代码执行
 
-> 任务：统计一下 simpleyyt 用户的 github 仓库
-
-![](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/mcp.mp4 ':include controls width="100%"')
+在安全沙箱中执行 Python、Shell 等代码，完成数据分析、自动化等任务。

@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_REGISTRY: simpleyyt
+  IMAGE_REGISTRY: maharab549
 
 jobs:
   build-and-push:

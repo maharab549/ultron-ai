@@ -33,7 +33,7 @@ Deploy using Docker Compose, you need to modify the `API_BASE` and `API_KEY` env
 ```yaml
 services:
   frontend:
-    image: simpleyyt/manus-frontend
+    image: ultron-ai-frontend
     ports:
       - "5173:80"
     depends_on:
@@ -45,7 +45,7 @@ services:
       - BACKEND_URL=http://backend:8000
 
   backend:
-    image: simpleyyt/manus-backend
+    image: ultron-ai-backend
     depends_on:
       - sandbox
     restart: unless-stopped
@@ -69,7 +69,7 @@ services:
       # MongoDB connection URI
       #- MONGODB_URI=mongodb://mongodb:27017
       # MongoDB database name
-      #- MONGODB_DATABASE=manus
+      #- MONGODB_DATABASE=ultron
       # MongoDB username (optional)
       #- MONGODB_USERNAME=
       # MongoDB password (optional)
@@ -87,7 +87,7 @@ services:
       # Sandbox server address (optional)
       #- SANDBOX_ADDRESS=
       # Docker image used for the sandbox
-      - SANDBOX_IMAGE=simpleyyt/manus-sandbox
+      - SANDBOX_IMAGE=ultron-ai-sandbox
       # Prefix for sandbox container names
       - SANDBOX_NAME_PREFIX=sandbox
       # Time-to-live for sandbox containers in minutes
@@ -144,7 +144,7 @@ services:
       - LOG_LEVEL=INFO
 
   sandbox:
-    image: simpleyyt/manus-sandbox
+    image: ultron-ai-sandbox
     command: /bin/sh -c "exit 0"  # prevent sandbox from starting, ensure image is pulled
     restart: "no"
     networks:
@@ -185,4 +185,4 @@ docker compose up -d
 
 > Note: If you see `sandbox-1 exited with code 0`, this is normal - it ensures the sandbox image is successfully pulled locally.
 
-Open your browser and visit <http://localhost:5173> to access Manus. 
+Open your browser and visit <http://localhost:5173> to access ULTRON AI. 

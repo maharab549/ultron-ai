@@ -22,7 +22,7 @@
 | 配置项 | 默认值 | 是否必需 | 说明 |
 |--------|--------|----------|------|
 | `MONGODB_URI` | `mongodb://mongodb:27017` | 否 | MongoDB 连接字符串 |
-| `MONGODB_DATABASE` | `manus` | 否 | 数据库名称 |
+| `MONGODB_DATABASE` | `ultron` | 否 | 数据库名称 |
 | `MONGODB_USERNAME` | - | 否 | MongoDB 用户名 |
 | `MONGODB_PASSWORD` | - | 否 | MongoDB 密码 |
 
@@ -44,7 +44,7 @@
 | 配置项 | 默认值 | 是否必需 | 说明 |
 |--------|--------|----------|------|
 | `SANDBOX_ADDRESS` | - | 否 | 沙箱服务器地址 |
-| `SANDBOX_IMAGE` | `simpleyyt/manus-sandbox` | 否 | Docker 沙箱镜像名称 |
+| `SANDBOX_IMAGE` | `ultron-ai-sandbox` | 否 | Docker 沙箱镜像名称 |
 | `SANDBOX_NAME_PREFIX` | `sandbox` | 否 | 沙箱容器名称前缀 |
 | `SANDBOX_TTL_MINUTES` | `30` | 否 | 沙箱生存时间（分钟） |
 | `SANDBOX_NETWORK` | `manus-network` | 否 | Docker 网络名称 |

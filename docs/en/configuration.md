@@ -22,7 +22,7 @@
 | Configuration | Default Value | Required | Description |
 |---------------|---------------|----------|-------------|
 | `MONGODB_URI` | `mongodb://mongodb:27017` | No | MongoDB connection string |
-| `MONGODB_DATABASE` | `manus` | No | Database name |
+| `MONGODB_DATABASE` | `ultron` | No | Database name |
 | `MONGODB_USERNAME` | - | No | MongoDB username |
 | `MONGODB_PASSWORD` | - | No | MongoDB password |
 
@@ -44,7 +44,7 @@
 | Configuration | Default Value | Required | Description |
 |---------------|---------------|----------|-------------|
 | `SANDBOX_ADDRESS` | - | No | Sandbox server address |
-| `SANDBOX_IMAGE` | `simpleyyt/manus-sandbox` | No | Docker sandbox image name |
+| `SANDBOX_IMAGE` | `ultron-ai-sandbox` | No | Docker sandbox image name |
 | `SANDBOX_NAME_PREFIX` | `sandbox` | No | Sandbox container name prefix |
 | `SANDBOX_TTL_MINUTES` | `30` | No | Sandbox time-to-live in minutes |
 | `SANDBOX_NETWORK` | `manus-network` | No | Docker network name |

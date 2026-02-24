@@ -1,101 +1,191 @@
-﻿# Manus 1.6 Max Local Setup Guide
+# ULTRON AI — Local Development Setup Guide
 
-This guide will help you set up and run the Manus 1.6 Max project on your local machine.
+This guide walks you through setting up ULTRON AI for local development with hot-reload support.
 
 ## Prerequisites
 
-- **Docker & Docker Compose**: Required for running the backend, database, and sandbox.
-- **Node.js (v18+)**: Required for the frontend.
-- **Python 3.11+**: Required for local backend development (optional if using Docker).
+| Tool | Version | Purpose |
+|:---|:---|:---|
+| Docker Desktop / Engine | 20.10+ | Container runtime |
+| Docker Compose | v2+ | Service orchestration |
+| Node.js | 18+ | Frontend development |
+| Python | 3.12+ | Backend development |
+| Git | Latest | Version control |
 
----
-
-## Step 1: Clone and Prepare
-
-1. Unzip the project files to your desired directory.
-2. Navigate to the project root:
-   ```bash
-   cd ai-manus
-   ```
-3. Copy the environment template:
-   ```bash
-   cp .env.example .env
-   ```
-
-## Step 2: Configure Environment Variables
-
-Open the `.env` file and configure your preferred LLM provider:
-
-### For OpenAI / DeepSeek:
-```env
-LLM_PROVIDER=openai
-API_KEY=your_openai_or_deepseek_key
-API_BASE=https://api.openai.com/v1 # or your deepseek base
-```
-
-### For Google Gemini:
-```env
-LLM_PROVIDER=gemini
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL_NAME=gemini-1.5-pro
-```
-
-### For Ollama (Local):
-```env
-LLM_PROVIDER=ollama
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL_NAME=llama3
-```
-
----
-
-## Step 3: Start the Backend (Docker)
-
-The easiest way to run the backend and its dependencies (MongoDB, Redis, Sandbox) is using Docker Compose:
+## Step 1: Clone the Repository
 
 ```bash
-docker-compose up -d
+git clone https://github.com/maharab549/ai-manus.git
+cd ai-manus
 ```
 
-This will start:
-- **Backend API**: Port 8000
-- **MongoDB**: Port 27017
-- **Redis**: Port 6379
-- **Sandbox**: Isolated environment for tool execution
+## Step 2: Environment Configuration
 
----
+Copy the environment template and configure your LLM settings:
 
-## Step 4: Start the Frontend
+```bash
+cp .env.example .env
+```
 
-1. Navigate to the frontend directory:
+Open `.env` and set these variables:
+
+```env
+# LLM Configuration
+API_KEY=your-api-key
+API_BASE=https://api.openai.com/v1
+MODEL_NAME=gpt-4o
+
+# Or for local LM Studio:
+# API_KEY=lm-studio
+# API_BASE=http://host.docker.internal:1234/v1
+# MODEL_NAME=your-model-name
+```
+
+## Step 3: Start Development Services
+
+The project includes a development compose file that mounts source code for hot-reload:
+
+```bash
+# Start all services in development mode
+./dev.sh up -d
+
+# Check service status
+./dev.sh ps
+```
+
+This starts:
+- **Frontend** on `http://localhost:5173` (Vite dev server with HMR)
+- **Backend** on port 8000 (FastAPI with auto-reload)
+- **MongoDB** on port 27017
+- **Redis** on port 6379
+- **Mock Server** on port 8090 (for testing without a real LLM)
+
+## Step 4: View Logs
+
+```bash
+# All services
+./dev.sh logs -f
+
+# Specific service
+./dev.sh logs -f backend
+./dev.sh logs -f frontend
+./dev.sh logs -f sandbox
+```
+
+## Step 5: Access the App
+
+Open **http://localhost:5173** in your browser.
+
+Default local auth credentials (when `AUTH_PROVIDER=local`):
+- Email: `admin@example.com`
+- Password: `admin`
+
+## Project Structure
+
+```
+ultron-ai/
+├── frontend/              # Vue 3 + TypeScript + Vite
+│   ├── src/
+│   │   ├── components/    # Reusable UI components
+│   │   ├── pages/         # Page views
+│   │   ├── api/           # API client layer
+│   │   ├── composables/   # Vue composables (hooks)
+│   │   └── locales/       # i18n translations
+│   └── vite.config.ts
+│
+├── backend/               # FastAPI + Python 3.12
+│   └── app/
+│       ├── domain/        # Business logic
+│       │   ├── services/  # Agents, flows, tools
+│       │   └── models/    # Domain models
+│       ├── infrastructure/# External integrations
+│       │   └── external/  # LLM clients, search, storage
+│       ├── interfaces/    # HTTP routes, WebSocket
+│       └── application/   # Application services
+│
+├── sandbox/               # Docker sandbox image
+│   └── app/               # Sandbox API server
+│       ├── services/      # File, shell, browser services
+│       └── api/           # REST API routes
+│
+├── mockserver/            # Mock LLM for development
+└── docs/                  # Docsify documentation
+```
+
+## Running Tests
+
+```bash
+# Backend tests
+cd backend
+pip install -r tests/requirements.txt
+pytest
+
+# Sandbox tests
+cd sandbox
+pip install -r tests/requirements.txt
+pytest
+```
+
+## MCP Configuration (Optional)
+
+To use MCP tools like GitHub API:
+
+1. Copy the MCP config template:
    ```bash
-   cd frontend
+   cp mcp.json.example mcp.json
    ```
-2. Install dependencies:
-   ```bash
-   pnpm install # or npm install
+
+2. Edit `mcp.json` with your tokens:
+   ```json
+   {
+     "mcpServers": {
+       "github": {
+         "command": "npx",
+         "args": ["-y", "@modelcontextprotocol/server-github"],
+         "transport": "stdio",
+         "enabled": true,
+         "env": {
+           "GITHUB_TOKEN": "your-github-token"
+         }
+       }
+     }
+   }
    ```
-3. Start the development server:
-   ```bash
-   pnpm dev
+
+3. Uncomment the MCP volume mount in `docker-compose.yml`:
+   ```yaml
+   volumes:
+     - ./mcp.json:/etc/mcp.json
    ```
-4. Open your browser and go to `http://localhost:5173`.
-
----
-
-## Step 5: Verify Setup
-
-1. Log in using the default credentials (if `AUTH_PROVIDER=local`):
-   - **Email**: `admin@example.com`
-   - **Password**: `admin`
-2. Start a new chat and try a simple command like "Hello" or "Check the current directory" to verify the LLM and Sandbox are working.
-
----
 
 ## Troubleshooting
 
-- **LLM Connection Issues**: Ensure your API keys are correct and you have internet access (for OpenAI/Gemini) or Ollama is running locally.
-- **Docker Errors**: Make sure Docker Desktop is running and you have enough disk space.
-- **Frontend Build Errors**: Ensure you are using Node.js v18 or higher.
+### Container can't connect to local LLM (LM Studio / Ollama)
 
-For more detailed documentation, visit [github.com/maharab549/ai-manus](https://github.com/maharab549/ai-manus).
+Use `host.docker.internal` instead of `localhost` or `127.0.0.1`:
+```env
+API_BASE=http://host.docker.internal:1234/v1
+```
+
+### Sandbox containers not cleaning up
+
+Sandboxes auto-expire after `SANDBOX_TTL_MINUTES` (default: 30). To manually remove:
+```bash
+docker ps -a | grep sandbox | awk '{print $1}' | xargs docker rm -f
+```
+
+### Frontend not loading
+
+Check if the backend is running:
+```bash
+./dev.sh logs -f backend
+```
+
+### Docker build fails (network issues)
+
+If Docker can't pull base images, use the volume mount workaround to inject code changes:
+```yaml
+# In docker-compose.yml, under backend service:
+volumes:
+  - ./backend/app:/app/app:ro
+```

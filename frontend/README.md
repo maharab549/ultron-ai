@@ -1,64 +1,54 @@
-﻿# ULTRON AI Frontend
+# ULTRON AI — Frontend
 
-English | [中文](README_zh.md)
+The web interface for ULTRON AI, built with **Vue 3**, **TypeScript**, and **Vite**.
 
-This is an AI chatbot application built with Vue 3 + TypeScript + Vite. This project is ported from the React version, maintaining the same functionality and interface design.
+## Tech Stack
 
-## Features
-
-- Chat interface
-- Tool panels (Search, Files, Terminal, Browser)
-
-## Installation
-
-Create a `.env.development` file with the following configuration:
-
-```
-# Backend address
-VITE_API_URL=http://127.0.0.1:8000
-```
-
-```bash
-# Install dependencies
-npm install
-
-# Run in development mode
-npm run dev
-
-# Build production version
-npm run build
-```
-
-## Docker Deployment
-
-This project supports containerized deployment using Docker:
-
-```bash
-# Build Docker image
-docker build -t ai-chatbot-vue .
-
-# Run container (map container port 80 to host port 8080)
-docker run -d -p 8080:80 ai-chatbot-vue
-
-# Access the application
-# Open browser and visit http://localhost:8080
-```
+- **Vue 3** — Composition API with `<script setup>`
+- **TypeScript** — Full type safety
+- **Vite** — Fast dev server with HMR
+- **Tailwind CSS** — Utility-first styling
+- **NoVNC** — Real-time browser viewing from sandbox
 
 ## Project Structure
 
 ```
 src/
-├── assets/          # Static resources and CSS files
-├── components/      # Reusable components
-│   ├── ChatInput.vue    # Chat input component
-│   ├── ChatMessage.vue  # Chat message component
-│   ├── Sidebar.vue      # Sidebar component
-│   ├── ToolPanel.vue    # Tool panel component
-│   └── ui/              # UI components
-├── pages/           # Page components
-│   ├── ChatPage.vue     # Chat page
-│   └── HomePage.vue     # Home page
-├── App.vue          # Root component
-├── main.ts          # Entry file
-└── index.css        # Global styles
-``` 
+├── components/        # Reusable UI components
+│   ├── chat/          # Chat interface components
+│   ├── sandbox/       # Browser viewer, file explorer
+│   └── common/        # Shared components
+│
+├── pages/             # Route page views
+├── api/               # Backend API client
+├── composables/       # Vue composables (hooks)
+├── constants/         # App-wide constants
+├── locales/           # i18n translation files
+├── lib/               # Utility libraries
+└── assets/            # Static assets (CSS, images)
+```
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server (http://localhost:5173)
+npm run dev
+
+# Build for production
+npm run build
+
+# Type check
+npx vue-tsc --noEmit
+```
+
+## Features
+
+- Real-time chat with streaming responses via SSE
+- Live browser viewing via NoVNC WebSocket
+- File explorer and editor for sandbox files
+- Session management and sharing
+- Multi-language support (i18n)
+- Responsive design for desktop browsers

@@ -1,394 +1,153 @@
-﻿# ULTRON AI (Manus AI 替代方案)
+﻿<p align="center">
+  <h1 align="center">⚡ ULTRON AI</h1>
+  <p align="center"><strong>开源自主 AI 智能体平台</strong></p>
+  <p align="center">由 <a href="https://github.com/maharab549">Maharab Hossen</a> 构建</p>
+</p>
 
-[English](README.md) | 中文
+<p align="center">
+  <a href="https://github.com/maharab549/ai-manus/stargazers"><img src="https://img.shields.io/github/stars/maharab549/ai-manus?style=for-the-badge&color=gold" alt="Stars"></a>
+  <a href="https://github.com/maharab549/ai-manus/network/members"><img src="https://img.shields.io/github/forks/maharab549/ai-manus?style=for-the-badge&color=blue" alt="Forks"></a>
+  <a href="https://github.com/maharab549/ai-manus/issues"><img src="https://img.shields.io/github/issues/maharab549/ai-manus?style=for-the-badge&color=red" alt="Issues"></a>
+</p>
 
-[![GitHub stars](https://img.shields.io/github/stars/maharab549/ai-manus?style=social)](https://github.com/maharab549/ai-manus/stargazers)
-&ensp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="#-快速开始">快速开始</a> •
+  <a href="#-功能特性">功能特性</a> •
+  <a href="#-系统架构">系统架构</a> •
+  <a href="#-配置说明">配置说明</a> •
+  <a href="./README.md">English</a>
+</p>
 
-ULTRON AI 是一个通用的 AI Agent 系统，支持在沙盒环境中运行各种工具和操作。
+---
 
-用 ULTRON AI 开启你的智能体之旅吧！
+## 🤔 什么是 ULTRON AI？
 
-👏 欢迎加入 [QQ群(1005477581)](https://qun.qq.com/universal-share/share?ac=1&authKey=p4X3Da5iMpR4liAenxwvhs7IValPKiCFtUevRlJouz9qSTSZsMnPJc3hzsJjgQYv&busi_data=eyJncm91cENvZGUiOiIxMDA1NDc3NTgxIiwidG9rZW4iOiJNZmUrTmQ0UzNDZDNqNDFVdjVPS1VCRkJGRWVlV0R3RFJSRVFoZDAwRjFDeUdUM0t6aUIyczlVdzRjV1BYN09IIiwidWluIjoiMzQyMjExODE1In0%3D&data=C3B-E6BlEbailV32co77iXL5vxPIhtD9y_itWLSq50hKqosO_55_isOZym2Faaq4hs9-517tUY8GSWaDwPom-A&svctype=4&tempid=h5_group_info)
+**ULTRON AI** 是一个开源的通用 AI 智能体系统，能够自主规划、推理和执行复杂任务。给它一个目标，它会自动分解任务、使用工具、浏览网络、编写代码、操作文件，并在安全的沙箱环境中交付结果。
 
-❤️ 喜欢 ULTRON AI? 点亮小星星 🌟 或 [赞助开发者](docs/sponsor.md)! ❤️
+可以将它看作 Manus AI、ChatGPT Code Interpreter 或 Devin 的自托管替代方案 — 完全开源，由你掌控。
 
-🚀 [Demo 演示](https://github.com/maharab549/ai-manus)
+### 对比
 
-## 示例
+| 功能 | ULTRON AI | Manus AI | ChatGPT |
+|:---|:---:|:---:|:---:|
+| 开源 | ✅ | ❌ | ❌ |
+| 自托管 | ✅ | ❌ | ❌ |
+| 网页浏览 | ✅ | ✅ | ✅ |
+| 代码执行 | ✅ | ✅ | ✅ |
+| 文件操作 | ✅ | ✅ | ✅ |
+| 沙箱环境 | ✅ | ✅ | ❌ |
+| MCP 工具集成 | ✅ | ❌ | ❌ |
+| 自定义 LLM | ✅ | ❌ | ❌ |
+| 本地/离线模式 | ✅ | ❌ | ❌ |
+| 免费使用 | ✅ | ❌ | ❌ |
 
-### 基本功能
+---
 
-https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe
+## ✨ 功能特性
 
-### Browser Use
+- 🧠 **自主规划** — 使用 Plan-Act 架构将复杂任务分解为可执行的步骤
+- 🌐 **实时浏览器** — 在沙箱中运行完整的 Chrome 浏览器，通过 NoVNC 实时查看
+- 💻 **Shell 和代码执行** — 在隔离的 Ubuntu 容器中运行 bash 命令和 Python 脚本
+- 📁 **文件管理** — 在沙箱文件系统中创建、读取、编辑和管理文件
+- 🔌 **MCP 工具生态** — 通过 MCP 服务器扩展功能（GitHub、数据库、API 等）
+- 🔍 **网页搜索** — 集成 Bing、Google 或百度搜索
+- 🔐 **安全沙箱** — 每个任务在独立的 Docker 容器中运行，自动清理
+- 👥 **多用户认证** — 内置邮箱/密码、本地管理员或无认证模式
+- 🎨 **现代化 UI** — Vue 3 界面，支持实时流、会话分享和工具可视化
+- 🤖 **任何 LLM** — 支持 OpenAI、DeepSeek、LM Studio、Ollama 或任何 OpenAI 兼容 API
 
-* 任务：llm 最新论文
+---
 
-https://github.com/user-attachments/assets/8f7788a4-fbda-49f5-b836-949a607c64ac
+## 🚀 快速开始
 
-### Code Use
+### 环境要求
 
-* 任务：写一个复杂的 python 示例
+- **Docker Desktop** (Windows/Mac) 或 **Docker Engine** (Linux) — v20.10+
+- 支持 **函数调用** 的 LLM（OpenAI、DeepSeek、LM Studio 等）
 
-https://github.com/user-attachments/assets/5cb2240b-0984-4db0-8818-a24f81624b04
+### 1. 克隆与配置
 
-
-## 主要特性
-
- * 部署：最小只需要一个 LLM 服务即可完成部署，不需要依赖其它外部服务。
- * 工具：支持 Terminal、Browser、File、Web Search、消息工具，并支持实查看和接管，支持外部 MCP 工具集成。
- * 沙盒：每个 Task 会分配单独的一个沙盒，沙盒在本地 Dock 环境里面运行。
- * 任务会话：通过 Mongo/Redis 对会话历史进行管理，支持后台任务。
- * 对话：支持停止与打断，支持文件上传与下载。
- * 多语言：支持中文与英文。
- * 认证：用户登录与认证。
-
-## 开发计划
-
- * 工具：支持 Deploy & Expose。
- * 沙盒：支持手机与 Windows 电脑接入。
- * 部署：支持 K8s 和 Dock Swarm 多集群部署。
-
-## 环境要求
-
-本项目主要依赖Docker进行开发与部署，需要安装较新版本的Docker：
-- Docker 20.10+
-- Docker Compose
-
-模型能力要求：
-- 兼容OpenAI接口
-- 支持FunctionCall
-- 支持Json Format输出
-
-推荐使用Deepseek与GPT模型。
-
-
-## 部署指南
-
-推荐使用Docker Compose进行部署：
-
-<!-- docker-compose-example.yml -->
-```yaml
-services:
-  frontend:
-    image: simpleyyt/manus-frontend
-    ports:
-      - "5173:80"
-    depends_on:
-      - backend
-    restart: unless-stopped
-    networks:
-      - manus-network
-    environment:
-      - BACKEND_URL=http://backend:8000
-
-  backend:
-    image: simpleyyt/manus-backend
-    depends_on:
-      - sandbox
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      #- ./mcp.json:/etc/mcp.json # Mount MCP servers directory
-    networks:
-      - manus-network
-    environment:
-      # OpenAI API base URL
-      - API_BASE=https://api.openai.com/v1
-      # OpenAI API key, replace with your own
-      - API_KEY=sk-xxxx
-      # LLM model name
-      - MODEL_NAME=gpt-4o
-      # LLM temperature parameter, controls randomness
-      - TEMPERATURE=0.7
-      # Maximum tokens for LLM response
-      - MAX_TOKENS=2000
-
-      # MongoDB connection URI
-      #- MONGODB_URI=mongodb://mongodb:27017
-      # MongoDB database name
-      #- MONGODB_DATABASE=manus
-      # MongoDB username (optional)
-      #- MONGODB_USERNAME=
-      # MongoDB password (optional)
-      #- MONGODB_PASSWORD=
-
-      # Redis server hostname
-      #- REDIS_HOST=redis
-      # Redis server port
-      #- REDIS_PORT=6379
-      # Redis database number
-      #- REDIS_DB=0
-      # Redis password (optional)
-      #- REDIS_PASSWORD=
-
-      # Sandbox server address (optional)
-      #- SANDBOX_ADDRESS=
-      # Docker image used for the sandbox
-      - SANDBOX_IMAGE=simpleyyt/manus-sandbox
-      # Prefix for sandbox container names
-      - SANDBOX_NAME_PREFIX=sandbox
-      # Time-to-live for sandbox containers in minutes
-      - SANDBOX_TTL_MINUTES=30
-      # Docker network for sandbox containers
-      - SANDBOX_NETWORK=manus-network
-      # Chrome browser arguments for sandbox (optional)
-      #- SANDBOX_CHROME_ARGS=
-      # HTTPS proxy for sandbox (optional)
-      #- SANDBOX_HTTPS_PROXY=
-      # HTTP proxy for sandbox (optional)
-      #- SANDBOX_HTTP_PROXY=
-      # No proxy hosts for sandbox (optional)
-      #- SANDBOX_NO_PROXY=
-      
-      # Search engine configuration
-      # Options: baidu, google, bing
-      - SEARCH_PROVIDER=bing
-
-      # Google search configuration, only used when SEARCH_PROVIDER=google
-      #- GOOGLE_SEARCH_API_KEY=
-      #- GOOGLE_SEARCH_ENGINE_ID=
-
-      # Auth configuration
-      # Options: password, none, local
-      - AUTH_PROVIDER=password
-
-      # Password auth configuration, only used when AUTH_PROVIDER=password
-      - PASSWORD_SALT=
-      - PASSWORD_HASH_ROUNDS=10
-
-      # Local auth configuration, only used when AUTH_PROVIDER=local
-      #- LOCAL_AUTH_EMAIL=admin@example.com
-      #- LOCAL_AUTH_PASSWORD=admin
-
-      # JWT configuration
-      - JWT_SECRET_KEY=your-secret-key-here
-      - JWT_ALGORITHM=HS256
-      - JWT_ACCESS_TOKEN_EXPIRE_MINUTES=30
-      - JWT_REFRESH_TOKEN_EXPIRE_DAYS=7
-
-      # Email configuration
-      # Only used when AUTH_PROVIDER=password
-      #- EMAIL_HOST=smtp.gmail.com
-      #- EMAIL_PORT=587
-      #- EMAIL_USERNAME=your-email@gmail.com
-      #- EMAIL_PASSWORD=your-password
-      #- EMAIL_FROM=your-email@gmail.com
-
-      # MCP configuration file path
-      #- MCP_CONFIG_PATH=/etc/mcp.json
-
-      # Application log level
-      - LOG_LEVEL=INFO
-
-  sandbox:
-    image: simpleyyt/manus-sandbox
-    command: /bin/sh -c "exit 0"  # prevent sandbox from starting, ensure image is pulled
-    restart: "no"
-    networks:
-      - manus-network
-
-  mongodb:
-    image: mongo:7.0
-    volumes:
-      - mongodb_data:/data/db
-    restart: unless-stopped
-    #ports:
-    #  - "27017:27017"
-    networks:
-      - manus-network
-
-  redis:
-    image: redis:7.0
-    restart: unless-stopped
-    networks:
-      - manus-network
-
-volumes:
-  mongodb_data:
-    name: manus-mongodb-data
-
-networks:
-  manus-network:
-    name: manus-network
-    driver: bridge
+```bash
+git clone https://github.com/maharab549/ai-manus.git
+cd ai-manus
+cp docker-compose-example.yml docker-compose.yml
 ```
-<!-- /docker-compose-example.yml -->
 
-保存成`docker-compose.yml`文件，并运行
+编辑 `docker-compose.yml`，设置你的 LLM 提供商：
 
-```shell
+**OpenAI：**
+```yaml
+- API_BASE=https://api.openai.com/v1
+- API_KEY=sk-your-key-here
+- MODEL_NAME=gpt-4o
+```
+
+**DeepSeek：**
+```yaml
+- API_BASE=https://api.deepseek.com/v1
+- API_KEY=sk-your-key-here
+- MODEL_NAME=deepseek-chat
+```
+
+**LM Studio（本地）：**
+```yaml
+- API_BASE=http://host.docker.internal:1234/v1
+- API_KEY=lm-studio
+- MODEL_NAME=your-model-name
+```
+
+### 2. 启动
+
+```bash
 docker compose up -d
 ```
 
-> 注意：如果提示`sandbox-1 exited with code 0`，这是正常的，这是为了让 sandbox 镜像成功拉取到本地。
+### 3. 访问
 
-打开浏览器访问<http://localhost:5173>即可访问 Manus。
+在浏览器中打开 **http://localhost:5173**。
 
-## 开发指南
+> **提示：** 看到 `sandbox-1 exited with code 0` 是正常的，它只是预拉取沙箱镜像。
 
-### 项目结构
+---
 
-本项目由三个独立的子项目组成：
+## ⚙️ 系统架构
 
-* `frontend`: manus 前端
-* `backend`: Manus 后端
-* `sandbox`: Manus 沙盒
-
-### 整体设计
-
-![Image](https://github.com/user-attachments/assets/69775011-1eb7-452f-adaf-cd6603a4dde5)
-
-**当用户发起对话时：**
-
-1. Web 向 Server 发送创建 Agent 请求，Server 通过`/var/run/docker.sock`创建出 Sandbox，并返回会话 ID。
-2. Sandbox 是一个 Ubuntu Docker 环境，里面会启动 chrome 浏览器及 File/Shell 等工具的 API 服务。
-3. Web 往会话 ID 中发送用户消息，Server 收到用户消息后，将消息发送给 PlanAct Agent 处理。
-4. PlanAct Agent 处理过程中会调用相关工具完成任务。
-5. Agent 处理过程中产生的所有事件通过 SSE 发回 Web。
-
-**当用户浏览工具时：**
-
-- 浏览器：
-    1. Sandbox 的无头浏览器通过 xvfb 与 x11vnc 启动了 vnc 服务，并且通过 websockify 将 vnc 转化成 websocket。
-    2. Web 的 NoVNC 组件通过 Server 的 Websocket Forward 转发到 Sandbox，实现浏览器查看。
-- 其它工具：其它工具原理也是差不多。
-
-### 环境准备
-
-1. 下载项目：
-```bash
-git clone https://github.com/maharab549/ai-manus.git
-cd ultron-ai
+```
+┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
+│   前端       │────▶│    后端       │────▶│     沙箱         │
+│  (Vue 3)    │◀────│  (FastAPI)   │◀────│ (Ubuntu+Chrome) │
+└─────────────┘ SSE └──────────────┘     └─────────────────┘
+                          │                       │
+                     ┌────┴────┐            ┌─────┴─────┐
+                     │ MongoDB │            │  浏览器    │
+                     │  Redis  │            │  终端      │
+                     └─────────┘            │  文件      │
+                                            └───────────┘
 ```
 
-2. 复制配置文件：
-```bash
-cp .env.example .env
-```
+---
 
-3. 修改配置文件：
+## 📋 配置说明
 
-<!-- .env.example -->
-```env
-# Model provider configuration
-API_KEY=
-API_BASE=http://mockserver:8090/v1
+| 变量 | 说明 | 默认值 |
+|:---|:---|:---|
+| `API_BASE` | LLM API 地址 | `http://mockserver:8090/v1` |
+| `API_KEY` | LLM API 密钥 | — |
+| `MODEL_NAME` | 模型标识符 | `deepseek-chat` |
+| `SEARCH_PROVIDER` | 搜索引擎（`bing`、`google`、`baidu`） | `baidu` |
+| `AUTH_PROVIDER` | 认证模式（`password`、`local`、`none`） | `password` |
 
-# Model configuration
-MODEL_NAME=deepseek-chat
-TEMPERATURE=0.7
-MAX_TOKENS=2000
+完整配置文档请参阅 [配置说明](docs/configuration.md)。
 
-# MongoDB configuration
-#MONGODB_URI=mongodb://mongodb:27017
-#MONGODB_DATABASE=manus
-#MONGODB_USERNAME=
-#MONGODB_PASSWORD=
+---
 
-# Redis configuration
-#REDIS_HOST=redis
-#REDIS_PORT=6379
-#REDIS_DB=0
-#REDIS_PASSWORD=
+## 📜 开源协议
 
-# Sandbox configuration
-#SANDBOX_ADDRESS=
-SANDBOX_IMAGE=simpleyyt/manus-sandbox
-SANDBOX_NAME_PREFIX=sandbox
-SANDBOX_TTL_MINUTES=30
-SANDBOX_NETWORK=manus-network
-#SANDBOX_CHROME_ARGS=
-#SANDBOX_HTTPS_PROXY=
-#SANDBOX_HTTP_PROXY=
-#SANDBOX_NO_PROXY=
+本项目开源。详情请查看 [LICENSE](LICENSE) 文件。
 
-# Search engine configuration
-# Options: baidu, google, bing
-SEARCH_PROVIDER=bing
+---
 
-# Google search configuration, only used when SEARCH_PROVIDER=google
-#GOOGLE_SEARCH_API_KEY=
-#GOOGLE_SEARCH_ENGINE_ID=
-
-# Auth configuration
-# Options: password, none, local
-AUTH_PROVIDER=password
-
-# Password auth configuration, only used when AUTH_PROVIDER=password
-PASSWORD_SALT=
-PASSWORD_HASH_ROUNDS=10
-
-# Local auth configuration, only used when AUTH_PROVIDER=local
-#LOCAL_AUTH_EMAIL=admin@example.com
-#LOCAL_AUTH_PASSWORD=admin
-
-# JWT configuration
-JWT_SECRET_KEY=your-secret-key-here
-JWT_ALGORITHM=HS256
-JWT_ACCESS_TOKEN_EXPIRE_MINUTES=30
-JWT_REFRESH_TOKEN_EXPIRE_DAYS=7
-
-# Email configuration
-# Only used when AUTH_PROVIDER=password
-#EMAIL_HOST=smtp.gmail.com
-#EMAIL_PORT=587
-#EMAIL_USERNAME=your-email@gmail.com
-#EMAIL_PASSWORD=your-password
-#EMAIL_FROM=your-email@gmail.com
-
-# MCP configuration
-#MCP_CONFIG_PATH=/etc/mcp.json
-
-# Log configuration
-LOG_LEVEL=INFO
-```
-<!-- /.env.example -->
-
-### 开发调试
-
-1. 运行调试：
-```bash
-# 相当于 docker compose -f docker-compose-development.yaml up
-./dev.sh up
-```
-
-各服务会以 reload 模式运行，代码改动会自动重新加载。暴露的端口如下：
-- 5173: Web前端端口
-- 8000: Server API服务端口
-- 8080: Sandbox API服务端口
-- 5900: Sandbox VNC端口
-- 9222: Sandbox Chrome浏览器CDP端口
-
-> *注意：在 Debug 模式全局只会启动一个沙盒*
-
-2. 当依赖变化时（requirements.txt或package.json），清理并重新构建：
-```bash
-# 清理所有相关资源
-./dev.sh down -v
-
-# 重新构建镜像
-./dev.sh build
-
-# 调试运行
-./dev.sh up
-```
-
-### 镜像发布
-
-```bash
-export IMAGE_REGISTRY=your-registry-url
-export IMAGE_TAG=latest
-
-# 构建镜像
-./run build
-
-# 推送到相应的镜像仓库
-./run push
-```
-
-## ⭐️ Star 记录
-
-[![Star History Chart](https://api.star-history.com/svg?repos=maharab549/ai-manus&type=Date)](https://www.star-history.com/#maharab549/ai-manus&Date)
+<p align="center">
+  <strong>⭐ 如果你觉得 ULTRON AI 有用，请给个 Star！</strong><br>
+  <a href="https://github.com/maharab549/ai-manus">https://github.com/maharab549/ai-manus</a>
+</p>

@@ -1,5 +1,7 @@
-# Sponsor
+# Support ULTRON AI
+
+If you find ULTRON AI useful, please consider giving us a star on GitHub!
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/e24b8cfc-dd95-479f-b155-6096bdca78d0" alt="Buy Me a Coffee" width="280"/>
+  <a href="https://github.com/maharab549/ai-manus">⭐ Star on GitHub</a>
 </div>

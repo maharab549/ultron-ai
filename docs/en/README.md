@@ -1,29 +1,39 @@
-﻿# 🤖 ULTRON AI Open Source General AI Agent
+# ULTRON AI
 
-Project URL: <https://github.com/maharab549/ai-manus>
+**Open-Source Autonomous AI Agent Platform**
 
-Join our community: [QQ Group (1005477581)](https://qun.qq.com/universal-share/share?ac=1&authKey=p4X3Da5iMpR4liAenxwvhs7IValPKiCFtUevRlJouz9qSTSZsMnPJc3hzsJjgQYv&busi_data=eyJncm91cENvZGUiOiIxMDA1NDc3NTgxIiwidG9rZW4iOiJNZmUrTmQ0UzNDZDNqNDFVdjVPS1VCRkJGRWVlV0R3RFJSRVFoZDAwRjFDeUdUM0t6aUIyczlVdzRjV1BYN09IIiwidWluIjoiMzQyMjExODE1In0%3D&data=C3B-E6BlEbailV32co77iXL5vxPIhtD9y_itWLSq50hKqosO_55_isOZym2Faaq4hs9-517tUY8GSWaDwPom-A&svctype=4&tempid=h5_group_info)
+ULTRON AI is a general-purpose AI agent system that can autonomously plan, reason and execute complex tasks inside secure sandboxed environments.
 
----
+## Features
 
-ULTRON AI is a general-purpose AI Agent system that can be fully privately deployed and supports running various tools and operations in a sandbox environment.
+- 🧠 Autonomous task planning and execution
+- 🌐 Full web browser with real-time viewing
+- 💻 Shell and code execution
+- 📁 File management
+- 🔌 MCP tool ecosystem
+- 🔍 Web search (Bing, Google, Baidu)
+- 🤖 Any OpenAI-compatible LLM
 
-The goal of ULTRON AI project is to become a fully privately deployable enterprise-level Manus application. Vertical Manus applications have many repetitive engineering tasks, and this project hopes to unify this part, allowing everyone to build vertical Manus applications like building blocks.
+## Quick Start
 
-Each service and tool in ULTRON AI includes a Built-in version that can be fully privately deployed. Later, through A2A and MCP protocols, both Built-in Agents and Tools can be replaced. The underlying infrastructure can also be replaced by providing diverse provider configurations or simple development adaptations. ULTRON AI supports distributed multi-instance deployment from the architectural design, facilitating horizontal scaling to meet enterprise-level deployment requirements.
+```bash
+git clone https://github.com/maharab549/ai-manus.git
+cd ai-manus
+cp docker-compose-example.yml docker-compose.yml
+# Edit docker-compose.yml with your LLM settings
+docker compose up -d
+```
 
----
+Visit **http://localhost:5173**
 
-## Basic Features
+## Documentation
 
-[](https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe ':include :type=video controls width="100%"')
+- [Quick Start](/en/quick_start.md)
+- [Configuration](/en/configuration.md)
+- [Architecture](/en/architecture.md)
+- [MCP Setup](/en/mcp.md)
 
-## Core Features
+## Links
 
- * **Deployment:** Only requires one LLM service for deployment, no dependency on other external services.
- * **Tools:** Supports Terminal, Browser, File, Web Search, message tools, with real-time viewing and takeover capabilities.
- * **Sandbox:** Each Task is allocated a separate sandbox that runs in a local Docker environment.
- * **Task Sessions:** Manages session history through Mongo/Redis, supports background tasks.
- * **Conversations:** Supports stopping and interruption, supports file upload and download.
- * **Multi-language:** Supports Chinese and English. 
- * **Authentication:** User login and authentication.
+- [GitHub Repository](https://github.com/maharab549/ai-manus)
+- [Full README](https://github.com/maharab549/ai-manus#readme)

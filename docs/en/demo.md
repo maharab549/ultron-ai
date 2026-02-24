@@ -1,20 +1,19 @@
 # ✨ Demo Scenarios
 
-## Computer Takeover
+ULTRON AI supports a wide variety of use cases:
 
-> Task: Check Zhihu trending topics
+## 🖥️ Computer Takeover
 
-[](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/takeover.mp4 ':include controls width="100%"')
+ULTRON AI can control a browser to perform web tasks like searching information, navigating websites, and filling out forms.
 
-## File Processing
+## 📄 File Processing
 
-> Task: Convert to JPG
+Supports file format conversion, document editing, data processing, and other file operations.
 
-![](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/file.mp4 ':include controls width="100%"')
+## 🔌 MCP Tool Integration
 
+Integrate external tools via the MCP protocol — GitHub API, databases, custom APIs, and more.
 
-## MCP Tool Integration
+## 💻 Code Execution
 
-> Task: Analyze the GitHub repositories of user simpleyyt
-
-![](https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/mcp.mp4 ':include controls width="100%"') 
+Execute Python, Shell, and other code in a secure sandbox for data analysis, automation, and more. 

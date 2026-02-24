@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: simpleyyt/manus-frontend
+    image: maharab549/manus-frontend
     ports:
       - "5173:80"
     depends_on:
@@ -12,7 +12,7 @@ services:
       - BACKEND_URL=http://backend:8000
 
   backend:
-    image: simpleyyt/manus-backend
+    image: maharab549/manus-backend
     depends_on:
       - sandbox
     restart: unless-stopped
@@ -54,7 +54,7 @@ services:
       # Sandbox server address (optional)
       #- SANDBOX_ADDRESS=
       # Docker image used for the sandbox
-      - SANDBOX_IMAGE=simpleyyt/manus-sandbox
+      - SANDBOX_IMAGE=maharab549/manus-sandbox
       # Prefix for sandbox container names
       - SANDBOX_NAME_PREFIX=sandbox
       # Time-to-live for sandbox containers in minutes
@@ -111,7 +111,7 @@ services:
       - LOG_LEVEL=INFO
 
   sandbox:
-    image: simpleyyt/manus-sandbox
+    image: maharab549/manus-sandbox
     command: /bin/sh -c "exit 0"  # prevent sandbox from starting, ensure image is pulled
     restart: "no"
     networks:

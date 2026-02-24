@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: ${IMAGE_REGISTRY:-simpleyyt}/manus-frontend:${IMAGE_TAG:-latest}
+    image: ${IMAGE_REGISTRY:-maharab549}/manus-frontend:${IMAGE_TAG:-latest}
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -19,7 +19,7 @@ services:
       - BACKEND_URL=http://backend:8000
 
   backend:
-    image: ${IMAGE_REGISTRY:-simpleyyt}/manus-backend:${IMAGE_TAG:-latest}
+    image: ${IMAGE_REGISTRY:-maharab549}/manus-backend:${IMAGE_TAG:-latest}
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -42,7 +42,7 @@ services:
       - .env
 
   sandbox:
-    image: ${IMAGE_REGISTRY:-simpleyyt}/manus-sandbox:${IMAGE_TAG:-latest}
+    image: ${IMAGE_REGISTRY:-maharab549}/manus-sandbox:${IMAGE_TAG:-latest}
     build:
       context: ./sandbox
       dockerfile: Dockerfile

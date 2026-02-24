@@ -1,29 +1,38 @@
-﻿# 🤖 ULTRON AI 开源通用智能体
+# ULTRON AI
 
-项目地址：<https://github.com/maharab549/ai-manus>
+**开源自主 AI 智能体平台**
 
-加入我们的社群：[QQ群(1005477581)](https://qun.qq.com/universal-share/share?ac=1&authKey=p4X3Da5iMpR4liAenxwvhs7IValPKiCFtUevRlJouz9qSTSZsMnPJc3hzsJjgQYv&busi_data=eyJncm91cENvZGUiOiIxMDA1NDc3NTgxIiwidG9rZW4iOiJNZmUrTmQ0UzNDZDNqNDFVdjVPS1VCRkJGRWVlV0R3RFJSRVFoZDAwRjFDeUdUM0t6aUIyczlVdzRjV1BYN09IIiwidWluIjoiMzQyMjExODE1In0%3D&data=C3B-E6BlEbailV32co77iXL5vxPIhtD9y_itWLSq50hKqosO_55_isOZym2Faaq4hs9-517tUY8GSWaDwPom-A&svctype=4&tempid=h5_group_info)
+ULTRON AI 是一个通用 AI 智能体系统，能够在安全沙箱环境中自主规划、推理和执行复杂任务。
 
----
+## 功能特性
 
-ULTRON AI 是一个通用的 AI Agent 系统，可以完全私有部署，支持在沙盒环境中运行各种工具和操作。
+- 🧠 自主任务规划和执行
+- 🌐 完整的 Web 浏览器实时查看
+- 💻 终端和代码执行
+- 📁 文件管理
+- 🔌 MCP 工具生态
+- 🔍 网页搜索（Bing、Google、百度）
+- 🤖 支持任何 OpenAI 兼容 LLM
 
-ULTRON AI 项目目标是希望成为可完全私有部署的企业级 Manus 应用。垂类 Manus 的应用有多种重复性的工程化工作，这个项目希望把这部分统一，让大家可以像搭积木一下建立起一个垂类 Manus 应用。
+## 快速开始
 
-ULTRON AI 中每个服务与工具都包含一个 Built-in 版本，可以做到完全私有部署。后续可以通过 A2A 与 MCP 协议，把 Built-in 的 Agent 与 Tools 都置换掉。底层基建也可以通过提供多样的提供商配置或者简单的开发适配置换掉。ULTRON AI 从架构设计上便支持分布式多实例部署，方便横向扩展，达到企业级的部署要求。
+```bash
+git clone https://github.com/maharab549/ai-manus.git
+cd ai-manus
+cp docker-compose-example.yml docker-compose.yml
+# 编辑 docker-compose.yml 设置 LLM 配置
+docker compose up -d
+```
 
----
+访问 **http://localhost:5173**
 
-## 基本功能
+## 文档
 
-[](https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe ':include :type=video controls width="100%"')
+- [快速上手](quick_start.md)
+- [配置说明](configuration.md)
+- [系统架构](architecture.md)
+- [MCP 配置](mcp.md)
 
-## 核心功能
+## 链接
 
- * **部署：**最小只需要一个 LLM 服务即可完成部署，不需要依赖其它外部服务。
- * **工具：**支持 Terminal、Browser、File、Web Search、消息工具，并支持实查看和接管。
- * **沙盒：**每个 Task 会分配单独的一个沙盒，沙盒在本地 Dock 环境里面运行。
- * **任务会话：**通过 Mongo/Redis 对会话历史进行管理，支持后台任务。
- * **对话：**支持停止与打断，支持文件上传与下载。
- * **多语言：**支持中文与英文。
- * **认证：**用户登录与认证。
+- [GitHub 仓库](https://github.com/maharab549/ai-manus)
